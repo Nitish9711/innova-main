@@ -1,0 +1,456 @@
+.h-500{
+    height: 500px;
+}
+
+.custom-text{
+    font-family: 'Raleway';
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+
+
+#hi{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 12rem;
+    line-height: 57%;
+    text-align: right;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+    // background:linear-gradient(to bottom, #b3ffab 0%, #12fff7 100%);;
+    // -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    // filter: drop-shadow(1px 1px 2px black);
+    // transform: skew(0, -15deg)  translate(-16rem, -7rem);
+}
+
+.text-red{
+    color: rgb(226, 2, 58);
+}
+
+#there{
+    font-family: 'Raleway', sans-serif;
+    text-align: right;
+    font-weight: 700;
+    font-size: 8rem;
+}
+
+.svg-style{
+    width: 100%;
+    min-width: 1000px;
+    // z-index: -1;
+}
+
+path, rect, polygon, polyline,line{
+    stroke-dasharray: 7000;
+    stroke-dashoffset: 7000;
+    /* stroke: #64B5F6; */
+    animation: draw 4s cubic-bezier(.81,.22,.88,.75) 2s forwards;
+}
+
+rect.cls-1{
+    height: 100%;
+}
+
+#Layer_9 polyline, #Layer_9 line, #Layer_13 polygon, .late{
+    animation: draw 7s ease-in 4s forwards;
+}
+
+/* path{
+    fill-opacity: 0;
+    animation: fill 10s ease-in 2s forwards, draw 10s ease-in 2s forwards;
+
+} */
+
+@keyframes draw{
+    0%{
+        /* stroke: #00FFCC; */
+        stroke-dasharray: 7000;
+        stroke-dashoffset: 7000;
+    }
+    100%{
+        /* stroke: #00FFCC; */
+        stroke-dasharray: 10000;
+    }
+}
+
+@keyframes bgcolor{
+    0%{
+        background: black;
+    }
+    100%{
+        background: linear-gradient(to bottom, #fc466b, #3f5efb);
+    }
+}
+
+@keyframes fill{
+    0%{
+        fill-opacity: 0;
+    }
+    90%{
+        fill-opacity: 0.5;
+    }
+    100%{
+        fill-opactity: 1;
+    }
+}
+
+.position-absolute{
+    position: absolute;
+}
+
+.text-med{
+    font-size:  x-large;
+}
+
+#binary{
+    opacity: 0.1;
+    font-weight: 100;
+    z-index: -2;
+    line-height: 100%;
+    text-align: right;
+    // -webkit-text-stroke: 2px rgb(255, 255, 255);
+    background:linear-gradient(to top, #b3ffab 0%, #12fff7 100%);;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    // transform: skew(0, -15deg)  translate(-16rem, -7rem);
+}
+
+
+.big{
+    opacity: 0.2;
+    filter: grayscale(100%) drop-shadow(5px, 5px, 0px, rgba(203, 123, 211, 1));
+    animation: colorChange 4s ease-in 0s infinite alternate;
+}
+
+@keyframes colorChange{
+    0%{
+        filter: hue-rotate(0);
+    }
+    100%{
+        filter: hue-rotate(100deg);
+    }
+}
+
+.app-toolbar {
+    position: sticky;
+    // s-webkit-position: -webkit-sticky; /* For macOS/iOS Safari */
+    top: 0; /* Sets the sticky toolbar to be on top */
+    z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+}
+
+.cls-3:hover{
+    fill: url(#gradient);
+}
+
+.about{
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 100%;
+    margin: 1rem;
+}
+
+.text{
+    font-size: 24px;
+    margin: 1rem;
+    word-wrap: break-word;
+    line-height: 100%;
+}
+
+@media only screen and (max-width: 500px) {
+    .updates{
+        width: 90%!important;
+        margin: 1rem;
+    }
+    .mob-h{
+        height: auto;
+    }
+}
+
+carousel
+{
+    background-color:  #3a3a3a;
+    border-radius: 20px;
+    z-index: 0
+
+}
+
+    .abt-us{
+
+        background-color: #3a3a3a;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    height: max-content;
+    margin-inline-start: auto;
+
+  display: inline-block;
+  position: relative;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  line-height: 2px;
+    }
+
+    .box{
+
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        // line-height: 2px;
+        background-color: #3a3a3a;
+        // width: -webkit-fill-available;
+        // height: 11rem;
+        color: white;
+        font-size: large;
+    line-height: normal;
+    font-weight: 400;
+    }
+
+
+
+    .h-500{
+        height: 500px;
+    }
+    
+    .custom-text{
+        font-family: 'Raleway';
+        font-weight: 800;
+        font-size: 3rem;
+    }
+    
+    
+    
+    .hi{
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        font-size: 12rem;
+        line-height: 57%;
+        // -webkit-text-stroke: 2px rgb(255, 255, 255);
+        background:linear-gradient(to bottom, #b3ffab 0%, #12fff7 100%);;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: colorChange 4s ease-in 0s infinite alternate;
+        // filter: drop-shadow(1px 1px 2px black);
+        // transform: skew(0, -15deg)  translate(-16rem, -7rem);
+    }
+    
+    .text-red{
+        color: rgb(226, 2, 58);
+    }
+    
+    #there{
+        font-family: 'Raleway', sans-serif;
+        text-align: right;
+        font-weight: 700;
+        font-size: 8rem;
+    }
+    
+    .svg-style{
+        width: 100%;
+        min-width: 1000px;
+        // z-index: -1;
+    }
+    
+    path, rect, polygon, polyline,line{
+        stroke-dasharray: 7000;
+        stroke-dashoffset: 7000;
+        /* stroke: #64B5F6; */
+        animation: draw 4s cubic-bezier(.81,.22,.88,.75) 2s forwards;
+    }
+    
+    rect.cls-1{
+        height: 100%;
+    }
+    
+    #Layer_9 polyline, #Layer_9 line, #Layer_13 polygon, .late{
+        animation: draw 7s ease-in 4s forwards;
+    }
+    
+    /* path{
+        fill-opacity: 0;
+        animation: fill 10s ease-in 2s forwards, draw 10s ease-in 2s forwards;
+    
+    } */
+    
+    @keyframes draw{
+        0%{
+            /* stroke: #00FFCC; */
+            stroke-dasharray: 7000;
+            stroke-dashoffset: 7000;
+        }
+        100%{
+            /* stroke: #00FFCC; */
+            stroke-dasharray: 10000;
+        }
+    }
+    
+    @keyframes bgcolor{
+        0%{
+            background: black;
+        }
+        100%{
+            background: linear-gradient(to bottom, #fc466b, #3f5efb);
+        }
+    }
+    
+    @keyframes fill{
+        0%{
+            fill-opacity: 0;
+        }
+        90%{
+            fill-opacity: 0.5;
+        }
+        100%{
+            fill-opactity: 1;
+        }
+    }
+    
+    .position-absolute{
+        position: absolute;
+    }
+    
+    .text-med{
+        font-size:  x-large;
+    }
+    
+    #binary{
+        opacity: 0.1;
+        font-weight: 100;
+        z-index: -2;
+        line-height: 100%;
+        text-align: right;
+        // -webkit-text-stroke: 2px rgb(255, 255, 255);
+        background:linear-gradient(to top, #b3ffab 0%, #12fff7 100%);;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        // transform: skew(0, -15deg)  translate(-16rem, -7rem);
+    }
+    
+    
+    .big{
+        opacity: 0.2;
+        filter: grayscale(100%) drop-shadow(5px, 5px, 0px, rgba(203, 123, 211, 1));
+        animation: colorChange 4s ease-in 0s infinite alternate;
+    }
+    
+    @keyframes colorChange{
+        0%{
+            filter: hue-rotate(0);
+        }
+        100%{
+            filter: hue-rotate(100deg);
+        }
+    }
+    
+    .app-toolbar {
+        position: sticky;
+        // s-webkit-position: -webkit-sticky; /* For macOS/iOS Safari */
+        top: 0; /* Sets the sticky toolbar to be on top */
+        z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+    }
+    
+    .cls-3:hover{
+        fill: url(#gradient);
+    }
+    
+    .about{
+        font-size: 60px;
+        font-weight: 600;
+        line-height: 100%;
+        margin: 1rem;
+    }
+    
+    .text{
+        font-size: 24px;
+        margin: 1rem;
+        word-wrap: break-word;
+        line-height: 100%;
+    }
+    
+    .text{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        line-height: 16px;     
+        // -webkit-line-clamp: calc(50vh - 16px); /* Write the number of 
+                                //   lines you want to be 
+                                //   displayed */
+        -webkit-box-orient: vertical;
+    }
+    
+    carousel{
+        background-color:  #3a3a3a;
+        border-radius: 20px;
+        z-index: 0
+    
+    }
+    
+        .abt-us{
+    
+            background-color: #3a3a3a;
+        margin-left: 20px;
+        margin-bottom: 10px;
+        height: max-content;
+        margin-inline-start: auto;
+    
+      display: inline-block;
+      position: relative;
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      line-height: 2px;
+        }
+    
+        .box{
+    
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+            // line-height: 2px;
+            background-color: #3a3a3a;
+            // width: -webkit-fill-available;
+            // height: 11rem;
+            color: white;
+            font-size: large;
+        line-height: normal;
+        font-weight: 400;
+        }
+    
+    
+        video{
+            height: 40vh;
+            object-fit: cover;
+        }
+        
+
+    
+
+        .grid{
+            padding: 5rem;
+        }
+
+        .margin-1{
+            margin: 1rem;
+        }
+
+
+        @media only screen and (max-width: 500px) {
+            .updates{
+                width: 90%!important;
+                margin: 1rem;
+            }
+            .mob-h{
+                height: auto;
+            }
+
+            .grid{
+                padding: 5rem 0 5rem 0;
+            }
+
+            .text{
+                -webkit-line-clamp: 15; /* Write the number of 
+                                  lines you want to be 
+                                  displayed */
+            }
+            
+            .sm-m-0{
+                padding: 0!important;
+            }
+
+            .text{
+                font-size: large;
+            }
+
+        }

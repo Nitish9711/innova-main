@@ -1,0 +1,139 @@
+<table class="table" multi = "true" *ngIf = "teams.length > 0 && !isLoading" >
+  <thead class=" text-primary">
+    <th>
+      Name
+    </th>
+    <th>
+      Designation
+    </th>
+    <th>
+      Linkedin
+    </th>
+    <th>
+      contact
+    </th>
+    <th>
+      mail Id
+    </th>
+    <th>
+      Image Preview
+    </th>
+   
+  </thead>
+  <tbody>
+
+
+    <tr *ngFor="let team of teams">
+      <td>
+        {{ team.name }}
+      </td>
+      <td>
+        {{ team.designation}}
+      </td>
+      <td>
+        {{ team.linkedin}}
+      </td>
+
+      <td>
+        {{ team.contact }}
+      </td>
+      <td>
+        {{ team.mailId }}
+      </td>
+      <td>
+        <img class = "image-preview" [src]="team.imagePath" [alt]="team.name">
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+
+
+
+<section class="p-3">
+<div class="heading text-color">Team</div>
+<mat-tab-group mat-align-tabs="center" class="text-white">
+    <mat-tab label="Faculty" class="sub-heading text-white">
+        <div class="text-white mt-3 w-100" fxLayout="row" fxLayoutAlign="center">
+            <div class="mt-big" fxLayout="column" fxLayoutAlign="center center">
+                <img src="assets/images/Narendra_Kumar.jpg" class="fa">
+                <div class="name">Dr. Narendra Kumar</div>
+                <div class="designation">Faculty Advisor</div>
+            </div>
+        </div>
+        <div class="msg-fa bg-darkgrey">
+            <h2 style="text-align: center;
+            font-size: xx-large;
+            margin-top: 10px;
+            margin-bottom: 15px;">Word from the Faculty Advisor</h2>
+
+    <p>Dear Reader,<br>
+        Delhi Technological University (formerly Delhi College of Engineering) is one of the premier
+        institutes of the nation and needs no introduction. Established almost 7 decades ago, the institute
+        is widely acclaimed for its eminence in the field of engineering education. Instituted with an aim
+        to cater to the needs of Indian industries for prowess manpower, DTU has achieved manifold
+        milestones and its journey uphill continue. It has played a pivotal role in the reconstruction,
+        modernization and administration of the society by producing exceptional and meritorious
+        students year after year. The student community of DTU been internationally admired in recent
+        times by getting numerous accolades overseas in events like formula racing car, super mileage
+        vehicle, all-terrain vehicle, unmanned aerial vehicle, underwater vehicle, hybrid vehicle, solar car etc.</p>
+
+        <p>In its bid to nurture innovative and creative abilities and foster enterprising spirit amongst
+            students from all over the country, INNOVA DTU continues to create legacy together.
+            During INNOVA, DTU witnesses colossal participation from technical institutions and some
+            of the most prodigious brains in the country possessing great intellect, caliber and acumen in
+            domains ranging from engineering to entrepreneurship.
+            An event of this magnitude provides a platform for an organization of your repute to develop
+            synergetic relations with the students by presenting your case studies, workshops, industry-
+            oriented problems and regale itself to publicity in the form of posters, banners and media
+            coverage. We invite you to be a part of this techno-managerial extravaganza by virtue of your
+            association/sponsorship with us.<br><br>
+
+            Thanking You,<br>
+            Prof. Narendra Kumar<br>
+            Faculty Advisor INNOVA’21</p>
+    </div>
+    </mat-tab>
+    <mat-tab label="Council" class="sub-heading text-white">
+        <div class="text-white mt-3 w-100" fxLayout="row wrap" fxLayoutAlign="center center">
+            <div *ngFor="let head of council" class="mt-big mx-3 member-card" fxLayout="column" fxLayoutAlign="center center">
+                <img src="{{head.imgSrc}}" class="member-img">
+                <div class="name">{{head.name}}</div>
+                <div class="designation">{{head.designation}}</div>
+                <div class="link" fxLayout="row" fxLayoutAlign="center center">
+                    <a href="{{head.mailId}}"><fa-icon class="icon"  [icon]="mailIcon" size="2x"></fa-icon></a>
+                    <a href="{{head.linkedIn}}"><fa-icon class="icon" [icon]="linkedInIcon" size="2x"></fa-icon></a>
+                </div>
+            </div>
+        </div>
+    </mat-tab>
+    <!-- <mat-tab label="Co-Heads" class="sub-heading text-white">
+        <div class="text-white mt-3 w-100" fxLayout="row wrap" fxLayoutAlign="center center">
+            <div class="mt-big mx-3" fxLayout="column" fxLayoutAlign="center center">
+                <img src="assets/images/Jatin.jpg" class="member-img">
+                <div class="name">Jatin Singh</div>
+                <div class="designation">Chairperson</div>
+            </div>
+
+            <div class="mt-big mx-3" fxLayout="column" fxLayoutAlign="center center">
+                <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" class="member-img">
+                <div class="name">Dr. Narendra Kumar</div>
+                <div class="designation">Faculty Advisor</div>
+            </div>
+
+            <div class="mt-big mx-3" fxLayout="column" fxLayoutAlign="center center">
+                <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" class="member-img">
+                <div class="name">Dr. Narendra Kumar</div>
+                <div class="designation">Faculty Advisor</div>
+            </div>
+        </div>
+    </mat-tab> -->
+  </mat-tab-group>
+<div class="w-100" fxLayout="column" fxLayoutAlign="space-around center">
+    <!-- <div class="sub-heading text-white mt-3">Faculty Advisor</div> -->
+
+
+</div>
+</section>

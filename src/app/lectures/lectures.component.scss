@@ -1,0 +1,134 @@
+.image-preview {
+  height: 5rem;
+  margin: 1rem 0;
+}
+td{
+  color: white;
+}
+
+.image-preview img {
+  height: 100%;
+}
+.hi{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    // -webkit-text-stroke: 2px rgb(255, 255, 255);
+    background:linear-gradient(to bottom, #b3ffab 0%, #12fff7 100%);;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    // filter: drop-shadow(1px 1px 2px black);
+    // transform: skew(0, -15deg)  translate(-16rem, -7rem);
+}
+
+.mb-big{
+    margin-bottom: 3rem;
+}
+
+.name{
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.desc{
+    text-align: right;
+}
+
+.designation{
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.mt-big{
+    margin-top: 10vh;
+}
+
+.mx-3{
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.ml-big{
+    margin-left: 2rem;
+}
+
+.photo{
+    height: 250px;
+    width: 300px;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: 0px 0px;
+    filter: drop-shadow(1px 1px 10px rgba(0,0,0,0.5));
+}
+
+.info{
+    height: 330px;
+    width: 350px;
+    border-radius: 20px;
+    padding:2rem;
+    padding-bottom: 0.5rem;
+    background-color: #242424;
+    // transform: translate(30px, 70px);
+    transform-origin: bottom right;
+    transform: scale(0.9, 0.9);
+    transition: 0.25s ease-in;
+}
+
+.box:hover{
+    .info{
+        transform: scale(1.02, 1.02);
+    }
+    .active-info{
+        transform: scale(1.02, 1.02);
+    }
+}
+
+.name{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.active-info{
+    height: 500px;
+    width: 350px;
+    border-radius: 20px;
+    background-color: #242424;
+    // transform: translate(30px, 70px);
+    transform-origin: bottom right;
+    transform: scale(0.9, 0.9);
+    transition: 0.25s ease-in;
+}
+
+.data{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #383838;
+    padding:2rem;
+}
+
+.border-padding{
+    padding-right: 3px;
+    padding-bottom:3px ;
+}
+
+.topic{
+    font-size: 1.5rem;
+    text-align: right;
+    background:linear-gradient(to bottom, #b3ffab 0%, #12fff7 100%);;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.date,.time{
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+@media only screen and (max-width: 400px) {
+    .speaker-card{
+        transform: scale(0.8);
+        transform-origin: top left;
+    }
+}

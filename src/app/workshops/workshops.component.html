@@ -1,0 +1,65 @@
+<table class="table" multi = "true" *ngIf = "workshops.length > 0 && !isLoading" >
+  <thead class=" text-primary">
+    <th>
+      Name
+    </th>
+    <th>
+      Profession
+    </th>
+    <th>
+      Price
+    </th>
+    <th>
+      Date
+    </th>
+    <th>
+      time
+    </th>
+    <th>
+      Status
+    </th>
+    <th>
+      Registration Link
+    </th>
+    <th>
+      Image Preview
+    </th>
+   
+  </thead>
+  <tbody>
+
+
+    <tr *ngFor="let workshop of workshops">
+      <td>
+        {{ workshop.title }}
+      </td>
+      <td>
+        {{ workshop.description }}
+      </td>
+      <td>
+        {{ workshop.price }}
+      </td>
+      <td>
+        {{ workshop.date.day}}/{{workshop.date.month}}/{{workshop.date.year}}
+      </td>
+      <td>
+        {{ workshop.time }}
+      </td>
+      <td>
+        {{ workshop.status }}
+      </td>
+      <td>
+        {{ workshop.regLink }}
+      </td>
+      <td>
+        <img class = "image-preview" [src]="workshop.imagePath" [alt]="workshop.title">
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<section class="p-3">
+<div class="heading text-color">Workshops</div>
+</section>

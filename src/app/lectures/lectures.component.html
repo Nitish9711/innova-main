@@ -1,0 +1,110 @@
+<table class="table" multi = "true" *ngIf = "lectures.length > 0 && !isLoading" >
+  <thead class=" text-primary">
+    <th>
+      Name
+    </th>
+    <th>
+      Profession
+    </th>
+    <th>
+      Lecture Title
+    </th>
+    <th>
+      Date
+    </th>
+    <th>
+      time
+    </th>
+    <th>
+      Status
+    </th>
+    <th>
+      Registration Link
+    </th>
+    <th>
+      Image Preview
+    </th>
+  </thead>
+  <tbody>
+
+
+    <tr *ngFor="let lecture of lectures">
+      <td>
+        {{ lecture.name }}
+      </td>
+      <td>
+        {{ lecture.profession }}
+      </td>
+      <td>
+        {{ lecture.lectureTitle }}
+      </td>
+      <td>
+        {{ lecture.date.day}}/{{lecture.date.month}}/{{lecture.date.year}}
+      </td>
+      <td>
+        {{lecture.time}}
+      </td>
+
+      <td>
+        {{ lecture.status }}
+      </td>
+      <td>
+        {{ lecture.regLink }}
+      </td>
+      <td>
+        <img class = "image-preview" [src]="lecture.imagePath" [alt]="lecture.name">
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+
+
+
+<section class="p-3">
+    <div class="heading text-white mb-big">Lectures</div>
+
+
+
+<div class="w-100" fxLayout="column" fxLayoutAlign="space-around end">
+    <!-- <div class="sub-heading text-white mt-3">Faculty Advisor</div> -->
+    <div class="sub-heading text-white mt-big">Upcoming</div>
+    <div class="text-white mt-3 w-100" fxLayout="row wrap" fxLayoutAlign="space-between center">
+
+        <div *ngFor="let speaker of upcoming" class="mt-big box speaker-card" fxLayout="column" fxLayoutAlign="start">
+            <div class="active-info border-padding bg-grad" fxLayout="column" fxLayoutAlign="end end">
+                <div class="data" fxLayout="column" fxLayoutAlign="end end">
+                    <div class="h-50" fxLayout="column" fxLayoutAlign="space-between end">
+                        <div class="w-100" fxLayout="column" fxLayoutAlign="end end"></div>
+                        <div class="name">{{speaker.name}}</div>
+                        <div class="topic">{{speaker.about}}</div>
+                        <div class="desc">{{speaker.desc}}</div>
+                        <div class="w-100" fxLayout="row" fxLayoutAlign="space-between center">
+                            <div class="date">{{speaker.date}}</div>
+                            <div class="time">{{speaker.time}}</div>
+                        </div>
+                        <a mat-button href="" class="bg-grad text-black">REGISTER</a>
+                    </div>
+                </div>
+            </div>
+            <img src="{{speaker.imgSrc}}" class="photo position-absolute">
+        </div>
+    </div>
+
+
+    <div class="sub-heading text-white mt-big">Past Speakers</div>
+    <div class="text-white mt-3 w-100" fxLayout="row wrap" fxLayoutAlign="center center">
+            <div *ngFor="let speaker of lectures" class="mt-big ml-big box speaker-card" fxLayout="column" fxLayoutAlign="start">
+                <div class="info" fxLayout="column" fxLayoutAlign="end end">
+                    <div class="name">{{speaker.name}}</div>
+                    <p>{{speaker.about}}</p>
+                </div>
+                <img src="{{speaker.imgSrc}}" class="photo position-absolute">
+            </div>
+    </div>
+</div>
+
+</section>
+

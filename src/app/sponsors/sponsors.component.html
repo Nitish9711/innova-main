@@ -1,0 +1,60 @@
+<table class="table" multi = "true" *ngIf = " sponsors.length > 0 && !isLoading" >
+  <thead class=" text-primary">
+    <th>
+      sponsorName
+    </th>
+    <th>
+      sponsorTitle
+    </th>
+    <th>
+      year
+    </th>
+    <th>
+      status
+    </th>
+    <th>
+      link
+    </th>
+    <th>
+      Image Preview
+    </th>
+   
+  </thead>
+  <tbody>
+
+
+    <tr *ngFor="let sponsor of sponsors">
+      <td>
+        {{ sponsor.sponsorName }}
+      </td>
+      <td>
+        {{ sponsor.sponsorTitle}}
+      </td>
+      <td>
+        {{ sponsor.year}}
+      </td>
+
+      <td>
+        {{ sponsor.status }}
+      </td>
+      <td>
+        {{ sponsor.link }}
+      </td>
+      <td>
+        <img class = "image-preview" [src]="sponsor.imagePath" [alt]="sponsor.sponsorName">
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+
+
+<section class="p-3">
+<div class="heading text-color mb-big">Past Sponsors</div>
+
+<div class="w-100" fxLayout="row wrap">
+    <img *ngFor="let sponsor of sponsors" src="{{sponsor.imgSrc}}" class="sponsor">
+</div>
+</section>

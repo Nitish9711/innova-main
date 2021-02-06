@@ -1,0 +1,14 @@
+.para{
+    padding: 1rem;
+    margin: 1rem;
+    text-align: right;
+    font-size: 2rem;
+    font-weight: 200;
+    line-height: 100%;
+}
+
+@media only screen and (max-width: 500px) {
+    .para{
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,53 @@
+<div class="w-100">
+
+<mat-toolbar class="bg-black text-white p-3 app-toolbar">
+    <a routerLink="/home" class="text-dec-none text-white">
+        <div class="MYSTIC">INNOVA</div>
+        <div class="MIRAGE">DTU<span class="text-red">.</span></div>
+    </a>
+    <span class="flex-spacer"></span>
+    <div fxShow="true" fxHide.lt-md="true">
+        <a mat-button routerLink="/lectures" class="nav-link ml-3"><span class="fa fa-info fa-lg"></span>Lectures</a>
+        <a mat-button routerLink="/competitions" class="nav-link ml-3"><span class="fa fa-list fa-lg"></span> Competitions</a>
+        <a mat-button routerLink="/workshops" class="nav-link ml-3"><span class="fa fa-address-card fa-lg"></span> Workshops</a>
+        <a mat-button routerLink="/sponsors" class="nav-link ml-3"><span class="fa fa-address-card fa-lg"></span> Sponsors</a>
+        <a mat-button routerLink="/team" class="nav-link ml-3"><span class="fa fa-address-card fa-lg"></span> Team</a>
+        <a mat-button routerLink="/contact" class="nav-link ml-3"><span class="fa fa-address-card fa-lg"></span> Contact</a>
+        <!-- <a mat-button routerLink="/sign-up" class="bg-white text-black md-raised ml-3"><span class="fa fa-address-card fa-lg"></span> Sign Up</a> -->
+    </div>
+    <button mat-icon-button (click)="openSidebar()" fxShow="true" fxHide.gt-sm>
+        <mat-icon>menu</mat-icon>
+      </button>
+</mat-toolbar>
+</div>
+
+<div *ngIf="sidenav" class="h-100v w-100v bg-black position-fixed sidenav text-white" fxLayout="column" fxLayoutAlign="center center">
+    <button mat-icon-button (click)="closeSidenav()"> 
+        <mat-icon class="fa-lg cross-size">clear</mat-icon>
+    </button>
+    <div (click)="closeSidenav()">
+        <a mat-button routerLink="/home" class="nav-link mob-link"><span class="fa fa-info fa-lg"></span>Home</a>
+    </div>
+    
+    <div (click)="closeSidenav()">
+            <a mat-button routerLink="/lectures" class="nav-link mob-link p-1"><span class="fa fa-info fa-lg"></span>Lectures</a>
+    </div>
+    <div (click)="closeSidenav()">
+            <a mat-button routerLink="/competitions" class="nav-link mob-link p-1"><span class="fa fa-list fa-lg"></span> Competitions</a>
+    </div>
+    <div (click)="closeSidenav()">
+            <a mat-button routerLink="/workshops" class="nav-link mob-link p-1"><span class="fa fa-address-card fa-lg"></span> Workshops</a>
+    </div>
+    <div (click)="closeSidenav()">
+            <a mat-button routerLink="/sponsors" class="nav-link mob-link p-1"><span class="fa fa-address-card fa-lg"></span> Sponsors</a>
+    </div>
+    <div (click)="closeSidenav()">
+            <a mat-button routerLink="/team" class="nav-link mob-link p-1"><span class="fa fa-address-card fa-lg"></span> Team</a>
+    </div>
+    <div (click)="closeSidenav()">
+            <a mat-button routerLink="/contact" class="nav-link mob-link p-1"><span class="fa fa-address-card fa-lg"></span> Contact</a>
+    </div>
+    <!-- <div (click)="closeSidenav()">
+            <a mat-button routerLink="/sign-up" class="bg-white text-black mob-link md-raised p-1"><span class="fa fa-address-card fa-lg"></span> Sign Up</a>
+    </div> -->
+</div>
