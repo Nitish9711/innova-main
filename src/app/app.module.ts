@@ -32,6 +32,7 @@ import { SponsorsComponent } from './sponsors/sponsors.component';
 import { TeamComponent } from './team/team.component';
 import { ContactComponent } from './contact/contact.component';
 import { MoreInfoComponent } from './home/more-info/more-info.component';
+import { SubscribersComponent } from './subscribers/subscribers.component';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { MoreInfoComponent } from './home/more-info/more-info.component';
     SponsorsComponent,
     TeamComponent,
     ContactComponent,
-    MoreInfoComponent
+    MoreInfoComponent,
+    SubscribersComponent
   ],
   imports: [
     
