@@ -52,6 +52,7 @@ import { MoreInfoComponent } from './home/more-info/more-info.component';
     MoreInfoComponent
   ],
   imports: [
+    
     BrowserModule,
     AppRoutingModule,
     MatToolbarModule,
