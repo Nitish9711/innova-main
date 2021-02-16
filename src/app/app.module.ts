@@ -14,6 +14,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { HttpClientModule , HTTP_INTERCEPTORS} from "@angular/common/http";
 
@@ -33,7 +34,9 @@ import { TeamComponent } from './team/team.component';
 import { ContactComponent } from './contact/contact.component';
 import { MoreInfoComponent } from './home/more-info/more-info.component';
 import { SubscribersComponent } from './subscribers/subscribers.component';
-
+import { CompetitionRMComponent } from './competitions/competition-rm/competition-rm.component';
+import { LecturesRmComponent } from './lectures/lectures-rm/lectures-rm.component';
+import { WorkshopRmComponent } from './workshops/workshop-rm/workshop-rm.component';
 
 @NgModule({
   declarations: [
@@ -51,15 +54,19 @@ import { SubscribersComponent } from './subscribers/subscribers.component';
     TeamComponent,
     ContactComponent,
     MoreInfoComponent,
-    SubscribersComponent
+    SubscribersComponent,
+    CompetitionRMComponent,
+    LecturesRmComponent,
+    WorkshopRmComponent
   ],
   imports: [
-    
+
     BrowserModule,
     AppRoutingModule,
     MatToolbarModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatProgressSpinnerModule,
     FlexLayoutModule,
     MatCardModule,
     MatSidenavModule,
@@ -72,8 +79,6 @@ import { SubscribersComponent } from './subscribers/subscribers.component';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-
-
 
   ],
   providers: [],

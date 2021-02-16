@@ -46,5 +46,25 @@ export class WorkshopsService {
   getWorkshopUpdateListener() {
     return this.workshopsUpdated.asObservable();
   }
+  findWorkshop(id: string) {
+    return this.http.get<{
+        _id: string,
+        title: string,
+        description: string,
+        imagePath: string
+        price: string,
+        date:{
+          year: string,
+          month: string,
+          day:string
+        },
+        status: string,
+        regLink: string,
+        time: string
+    }>(
+      "http://localhost:5000/api/workshops/" + id
+    );
+  }
+
 
 }

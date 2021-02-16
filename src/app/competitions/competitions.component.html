@@ -73,12 +73,16 @@
           <div *ngFor="let competition of competitions">
             <div *ngIf="competition.status ==='upcoming'">
               <div class="text-white mt-3 w-100" fxLayout="row wrap" fxLayoutAlign="center center">
-                
-                <mat-card class="example-card bg-darkgrey text-white m-3">
+
+                <mat-card class="example-card bg-darkgrey text-white m-3"  [routerLink]="['/competitionDetail', competition._id]">
                     <img mat-card-image src="{{competition.imagePath}}" class="img-size" alt="{{competition.title}}">
                     <mat-card-content>
                         <h1> {{ competition.title }}</h1>
                         <p style="line-height: 16px;">{{ competition.description }}</p>
+
+                        <!-- <app-competition-rm [data]="competition"></app-competition-rm>
+                        <a routerLink="/competitionDetail" [data]="competition">ReadMore</a>
+                        <router-outlet></router-outlet> -->
                         <p>Link: {{ competition.regLink }}</p>
                         <p>Date: {{ competition.date.day}}/{{competition.date.month}}/{{competition.date.year}} </p>
                         <p>Time:  {{ competition.time}}</p>
@@ -105,7 +109,7 @@
 
             <div *ngIf="competition.status  ==='done'">
               <div class="text-white mt-3 w-100" fxLayout="row wrap" fxLayoutAlign="center center">
-                <mat-card class="example-card bg-darkgrey text-white m-3">
+                <mat-card class="example-card bg-darkgrey text-white m-3" [routerLink]="['/competitionDetail', competition._id]">
                     <img mat-card-image src="{{competition.imagePath}}" class="img-size" alt="competition.title">
                     <mat-card-content>
                       <h1> {{ competition.title }}</h1>

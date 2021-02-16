@@ -47,4 +47,21 @@ export class LecturesService {
     return this.lecturesUpdated.asObservable();
   }
 
+  findLecture(id: string) {
+    return this.http.get<{
+      _id: string;
+      name: string;
+       profession:string;
+      date:{year:string; day:string; month:string;};
+      status:string;
+      imagePath:string;
+      regLink:string;
+      lectureTitle:string;
+      time: string;
+    }>(
+      "http://localhost:5000/api/lectures/" + id
+    );
+  }
+
+
 }

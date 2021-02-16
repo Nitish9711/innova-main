@@ -73,14 +73,14 @@
     <div class="sub-heading text-white mt-big">Upcoming
 
     <div *ngFor="let lecture of lectures">
-      <div *ngIf="lecture.status ==='upcoming'">
+      <div *ngIf="lecture.status ==='upcoming'" >
 
           <div class="text-white mt-3 w-100" fxLayout="row wrap" fxLayoutAlign="space-between center">
 
             <div class="mt-big box speaker-card" fxLayout="column" fxLayoutAlign="start">
-                <div class="active-info border-padding bg-grad" fxLayout="column" fxLayoutAlign="end end">
+                <div class="active-info border-padding bg-grad" fxLayout="column" fxLayoutAlign="end end"  [routerLink]="['/lectureDetail', lecture._id]">
                     <div class="data" fxLayout="column" fxLayoutAlign="end end">
-                        <div class="h-50" fxLayout="column" fxLayoutAlign="space-between end">
+                        <div class="h-50" fxLayout="column" fxLayoutAlign="space-between end" >
                             <div class="w-100" fxLayout="column" fxLayoutAlign="end end"></div>
                             <div class="name">{{ lecture.name }}</div>
                             <div class="topic">{{ lecture.lectureTitle }}</div>
@@ -93,7 +93,7 @@
                         </div>
                     </div>
                 </div>
-                <img src="{{lecture.imagePath}}" class="photo position-absolute">
+                <img src="{{lecture.imagePath}}" class="photo position-absolute"  [routerLink]="['/lectureDetail', lecture._id]">
             </div>
         </div>
 
@@ -113,29 +113,29 @@
                   <button mat-button class="bg-black rounded">SHARE</button>
               </mat-card-actions>
           </mat-card>
-      
-      
+
+
     </div> -->
 
       </div>
 
     </div>
   </div>
-    
+
 
 
     <div class="sub-heading text-white mt-big">Past Speakers
-    
+
 
       <div *ngFor="let lecture of lectures">
         <div *ngIf="lecture.status ==='done'">
-  
+
             <div class="text-white mt-3 w-100" fxLayout="row wrap" fxLayoutAlign="space-between center">
-  
-              <div class="mt-big box speaker-card" fxLayout="column" fxLayoutAlign="start">
+
+              <div class="mt-big box speaker-card" fxLayout="column" fxLayoutAlign="start" [routerLink]="['/lectureDetail', lecture._id]">
                   <div class="active-info border-padding bg-grad" fxLayout="column" fxLayoutAlign="end end">
                       <div class="data" fxLayout="column" fxLayoutAlign="end end">
-                          <div class="h-50" fxLayout="column" fxLayoutAlign="space-between end">
+                          <div class="h-50" fxLayout="column" fxLayoutAlign="space-between end" >
                               <div class="w-100" fxLayout="column" fxLayoutAlign="end end"></div>
                               <div class="name">{{ lecture.name }}</div>
                               <div class="topic">{{ lecture.lectureTitle }}</div>
@@ -148,10 +148,10 @@
                           </div>
                       </div>
                   </div>
-                  <img src="{{lecture.imagePath}}" class="photo position-absolute">
+                  <img src="{{lecture.imagePath}}" class="photo position-absolute"  [routerLink]="['/lectureDetail', lecture._id]">
               </div>
           </div>
-  
+
           <!-- <div class="text-white mt-3 w-100" fxLayout="row wrap" fxLayoutAlign="center center">
             <mat-card class="example-card bg-darkgrey text-white m-3">
                 <img mat-card-image src="{{competition.imagePath}}" class="img-size" alt="{{competition.title}}">
@@ -161,19 +161,19 @@
                     <p>Link: {{ competition.regLink }}</p>
                     <p>Date: {{ competition.date.day}}/{{competition.date.month}}/{{competition.date.year}} </p>
                     <p>Time:  {{ competition.time}}</p>
-  
+
                 </mat-card-content>
                 <mat-card-actions fxLayoutAlign="end">
                     <button mat-button class="bg-black rounded">LIKE</button>
                     <button mat-button class="bg-black rounded">SHARE</button>
                 </mat-card-actions>
             </mat-card>
-        
-        
+
+
       </div> -->
-  
+
         </div>
-  
+
       </div>
     </div>
 </div>
