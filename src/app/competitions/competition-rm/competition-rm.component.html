@@ -1,1 +1,13 @@
-<h1>Competition read more</h1>
+
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <div *ngIf="!isLoading">
+    <p style= "color: white;">{{this.competition.title}}</p>
+    <p style= "color: white;">{{this.competition.description}}</p>
+    <p style= "color: white;">{{this.competition.status}}</p>
+    <p style= "color: white;">{{this.competition.date.day}}</p>
+    <p style= "color: white;">{{this.competition.date.day}}</p>
+    <img class="image-preview"  [src]="this.competition.imagePath" [alt]="this.competition.title">
+    <p style= "color: white;">{{this.competition.imagePath}}</p>
+    <p style= "color: white;">{{this.competition.time}}</p>
+    <p style= "color: white;">{{this.competition.regLink}}</p>
+  </div>

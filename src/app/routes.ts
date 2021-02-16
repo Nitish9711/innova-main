@@ -10,11 +10,14 @@ import { ContactComponent } from './contact/contact.component';
 import { MoreInfoComponent } from './home/more-info/more-info.component';
 import { SubscribersComponent } from './subscribers/subscribers.component';
 import { CompetitionRMComponent } from './competitions/competition-rm/competition-rm.component';
+import { LecturesRmComponent } from './lectures/lectures-rm/lectures-rm.component';
+import { WorkshopRmComponent } from './workshops/workshop-rm/workshop-rm.component';
+
 
 export const routes: Routes = [
   { path: 'home',  component: HomeComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full'},
-  { path: '', component: TemplateBasicComponent, 
+  { path: '', component: TemplateBasicComponent,
     children: [{
       path:'lectures',
       component: LecturesComponent
@@ -48,8 +51,16 @@ export const routes: Routes = [
       component: SubscribersComponent
     },
     {
-      path: 'competitionDetail',
+      path: 'competitionDetail/:competitionId',
       component: CompetitionRMComponent
+    },
+    {
+      path: 'lectureDetail/:lectureId',
+      component: LecturesRmComponent
+    },
+    {
+      path: 'workshopDetail/:workshopId',
+      component: WorkshopRmComponent
     }
   ]
   },

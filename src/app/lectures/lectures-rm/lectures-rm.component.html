@@ -1,1 +1,13 @@
-<p>lectures-rm works!</p>
+
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <div *ngIf="!isLoading">
+    <p style= "color: white;">{{this.lecture.name}}</p>
+    <p style= "color: white;">{{this.lecture.profession}}</p>
+    <p style= "color: white;">{{this.lecture.status}}</p>
+    <p style= "color: white;">{{this.lecture.date.day}}</p>
+    <p style= "color: white;">{{this.lecture.date.day}}</p>
+    <img class="image-preview"  [src]="this.lecture.imagePath" [alt]="this.lecture.name">
+    <p style= "color: white;">{{this.lecture.imagePath}}</p>
+    <p style= "color: white;">{{this.lecture.time}}</p>
+    <p style= "color: white;">{{this.lecture.regLink}}</p>
+  </div>

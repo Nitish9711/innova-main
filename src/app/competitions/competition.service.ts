@@ -46,5 +46,24 @@ export class CompetitionsService {
     return this.competitionsUpdated.asObservable();
   }
 
+  findCompetition(id: string) {
+    return this.http.get<{
+        _id: string,
+        title: string,
+        description: string
+        imagePath: string,
+        status: string,
+        date:{
+          year: string,
+          month: string,
+          day:string
+        },
+        time: string,
+        regLink: string
+    }>(
+      "http://localhost:5000/api/competitions/" + id
+    );
+  }
+
 
 }

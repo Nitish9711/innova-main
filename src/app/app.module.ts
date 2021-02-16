@@ -14,6 +14,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { HttpClientModule , HTTP_INTERCEPTORS} from "@angular/common/http";
 
@@ -59,12 +60,13 @@ import { WorkshopRmComponent } from './workshops/workshop-rm/workshop-rm.compone
     WorkshopRmComponent
   ],
   imports: [
-    
+
     BrowserModule,
     AppRoutingModule,
     MatToolbarModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatProgressSpinnerModule,
     FlexLayoutModule,
     MatCardModule,
     MatSidenavModule,
@@ -77,8 +79,6 @@ import { WorkshopRmComponent } from './workshops/workshop-rm/workshop-rm.compone
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-
-
 
   ],
   providers: [],

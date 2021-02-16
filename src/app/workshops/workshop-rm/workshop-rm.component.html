@@ -1,1 +1,13 @@
-<p>workshop-rm works!</p>
+
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <div *ngIf="!isLoading">
+    <p style= "color: white;">{{this.workshop.title}}</p>
+    <p style= "color: white;">{{this.workshop.description}}</p>
+    <p style= "color: white;">{{this.workshop.status}}</p>
+    <p style= "color: white;">{{this.workshop.date.day}}</p>
+    <p style= "color: white;">{{this.workshop.date.day}}</p>
+    <img class="image-preview"  [src]="this.workshop.imagePath" [alt]="this.workshop.title">
+    <p style= "color: white;">{{this.workshop.imagePath}}</p>
+    <p style= "color: white;">{{this.workshop.time}}</p>
+    <p style= "color: white;">{{this.workshop.regLink}}</p>
+  </div>

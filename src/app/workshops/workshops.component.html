@@ -24,12 +24,13 @@
     <th>
       Image Preview
     </th>
-   
+
   </thead>
   <tbody>
 
 
-    <tr *ngFor="let workshop of workshops">
+    <tr *ngFor="let workshop of workshops" >
+      <div [routerLink]="['/workshopDetail', workshop._id]">
       <td>
         {{ workshop.title }}
       </td>
@@ -54,7 +55,7 @@
       <td>
         <img class = "image-preview" [src]="workshop.imagePath" [alt]="workshop.title">
       </td>
-
+    </div>
     </tr>
 
   </tbody>
