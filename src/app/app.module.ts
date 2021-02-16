@@ -33,7 +33,9 @@ import { TeamComponent } from './team/team.component';
 import { ContactComponent } from './contact/contact.component';
 import { MoreInfoComponent } from './home/more-info/more-info.component';
 import { SubscribersComponent } from './subscribers/subscribers.component';
-
+import { CompetitionRMComponent } from './competitions/competition-rm/competition-rm.component';
+import { LecturesRmComponent } from './lectures/lectures-rm/lectures-rm.component';
+import { WorkshopRmComponent } from './workshops/workshop-rm/workshop-rm.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,10 @@ import { SubscribersComponent } from './subscribers/subscribers.component';
     TeamComponent,
     ContactComponent,
     MoreInfoComponent,
-    SubscribersComponent
+    SubscribersComponent,
+    CompetitionRMComponent,
+    LecturesRmComponent,
+    WorkshopRmComponent
   ],
   imports: [
     

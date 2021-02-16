@@ -9,6 +9,7 @@ import { WorkshopsComponent } from './workshops/workshops.component';
 import { ContactComponent } from './contact/contact.component';
 import { MoreInfoComponent } from './home/more-info/more-info.component';
 import { SubscribersComponent } from './subscribers/subscribers.component';
+import { CompetitionRMComponent } from './competitions/competition-rm/competition-rm.component';
 
 export const routes: Routes = [
   { path: 'home',  component: HomeComponent},
@@ -46,6 +47,10 @@ export const routes: Routes = [
       path:'subscribe',
       component: SubscribersComponent
     },
+    {
+      path: 'competitionDetail',
+      component: CompetitionRMComponent
+    }
   ]
   },
   // { path: 'contact',     component: ContactComponent },

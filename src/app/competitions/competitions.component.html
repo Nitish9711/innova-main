@@ -79,6 +79,10 @@
                     <mat-card-content>
                         <h1> {{ competition.title }}</h1>
                         <p style="line-height: 16px;">{{ competition.description }}</p>
+
+                        <!-- <app-competition-rm [data]="competition"></app-competition-rm>
+                        <a routerLink="/competitionDetail" [data]="competition">ReadMore</a>
+                        <router-outlet></router-outlet> -->
                         <p>Link: {{ competition.regLink }}</p>
                         <p>Date: {{ competition.date.day}}/{{competition.date.month}}/{{competition.date.year}} </p>
                         <p>Time:  {{ competition.time}}</p>

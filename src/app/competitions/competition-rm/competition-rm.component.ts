@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation,Input } from '@angular/core';
 import { Competition } from '../competition.model';
 import { CompetitionsService } from '../competition.service';
 import { Params, ActivatedRoute,Router } from '@angular/router';
@@ -13,18 +13,15 @@ import { Location } from '@angular/common';
 })
 export class CompetitionRMComponent implements OnInit {
 
-  competition: Competition;
-
+ @Input() data;
 
   // constructor(private competitionservice: CompetitionsService,
 	// 	private route: ActivatedRoute,
 	// 	private location: Location) { }
 
-    constructor(private competitionservice: CompetitionsService,private router:Router, private activatedRoute:ActivatedRoute) {
-      console.log(this.router.getCurrentNavigation().extras.state);
- }
-
-  ngOnInit() {
+    constructor() {}
+ 
+  ngOnInit(): void {
 
     // let _id = this.route.snapshot.params['id'];
 		// this.competitionservice.getCompetitions(_id).then(competition => this.competition = competition);
