@@ -74,23 +74,15 @@
             <div *ngIf="competition.status ==='upcoming'">
               <div class="text-white mt-3 w-100" fxLayout="row wrap" fxLayoutAlign="center center">
 
-                <mat-card class="example-card bg-darkgrey text-white m-3"  [routerLink]="['/competitionDetail', competition._id]">
+                <mat-card class="example-card bg-darkgrey text-white m-3">
                     <img mat-card-image src="{{competition.imagePath}}" class="img-size" alt="{{competition.title}}">
                     <mat-card-content>
                         <h1> {{ competition.title }}</h1>
-                        <p style="line-height: 16px;">{{ competition.description }}</p>
-
-                        <!-- <app-competition-rm [data]="competition"></app-competition-rm>
-                        <a routerLink="/competitionDetail" [data]="competition">ReadMore</a>
-                        <router-outlet></router-outlet> -->
-                        <p>Link: {{ competition.regLink }}</p>
-                        <p>Date: {{ competition.date.day}}/{{competition.date.month}}/{{competition.date.year}} </p>
-                        <p>Time:  {{ competition.time}}</p>
-
+                        <p style="line-height: 16px;">{{ competition.description }}</p>   
                     </mat-card-content>
                     <mat-card-actions fxLayoutAlign="end">
-                        <button mat-button class="bg-black rounded">LIKE</button>
-                        <button mat-button class="bg-black rounded">SHARE</button>
+                        <button mat-button href="#" class="bg-black rounded">REGISTER</button>
+                        <button mat-button class="bg-black rounded" [routerLink]="['/competitionDetail', competition._id]">Read More</button>
                     </mat-card-actions>
                 </mat-card>
 
@@ -114,13 +106,11 @@
                     <mat-card-content>
                       <h1> {{ competition.title }}</h1>
                       <p style="line-height: 16px;">{{ competition.description }}</p>
-                      <p>Link: {{ competition.regLink }}</p>
-                      <p>Date: {{ competition.date.day}}/{{competition.date.month}}/{{competition.date.year}} </p>
-                      <p>Time:  {{ competition.time}}</p>
+                     
                     </mat-card-content>
                     <mat-card-actions fxLayoutAlign="end">
-                        <button mat-button class="bg-black rounded">LIKE</button>
-                        <button mat-button class="bg-black rounded">SHARE</button>
+                      <button mat-button href="#" class="bg-black rounded">REGISTER</button>
+                      <button mat-button class="bg-black rounded" [routerLink]="['/competitionDetail', competition._id]">Read More</button>
                     </mat-card-actions>
                 </mat-card>
 

@@ -2,3 +2,25 @@
   height: 5rem;
   margin: 1rem 0;
 }
+
+.nfo{
+
+  color: white;
+    height: max-content;
+    border-radius: 20px;
+    background-color: #242424 !important;    // padding: 30px;
+    font-size: 20px;
+    line-height: normal;
+    font-weight: 400;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.img{
+
+  height: 20rem;
+    /* width: min-content; */
+    padding: 25px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 10px;
+}
