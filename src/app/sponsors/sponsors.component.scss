@@ -9,6 +9,10 @@ td{
 .image-preview img {
   height: 100%;
 }
+.img-size{
+  height: 200px;
+  object-fit: cover;
+}
 
 .sponsor{
     background-color: white;

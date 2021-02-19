@@ -8,39 +8,22 @@
 <div id="subscription-form">
   <form [formGroup]="form" class="mat-form-field" role = "form" name = "formSubscriber" >
     <div class="form-part">
-      <label for="name">Name  </label>
+      <label for="name"><b>Name:</b>  </label>
       <input
       matInput
         type="text"
         name="name"
         id="name"
         formControlName="name"
-        placeholder="Your Name"
       />
     </div>
     <div class="form-part">
-      <label for="phone">Contact Number</label>
-      <input
-      matInput
-        type="number"
-        name="phone"
-        id="phone"
-        placeholder=" Your Number"
-        maxlength="10"
-         formControlName="phone"
-        size="10"
-      />
+      <label for="phone"><b>Contact Number:</b></label>
+      <input matInput type="number" name="phone" id="phone"  maxlength="10" formControlName="phone" size="10"/>
     </div>
     <div class="form-part">
-      <label for="email">Email </label>
-      <input
-      matInput
-        type="email"
-        name="email"
-        id="email"
-        placeholder="Your Email"
-        formControlName="email"
-      />
+      <label for="email"><b>Email:</b> </label>
+      <input matInput type="email" name="email" id="email" formControlName="email"/>
     </div>
 
     <button id="form-btn" type="submit" (click) = "onSaveSubscriber($event)" >Submit</button>

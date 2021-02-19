@@ -9,3 +9,33 @@ td{
 .image-preview img {
   height: 100%;
 }
+
+.example-card {
+    max-width: 400px;
+    border-radius: 20px;
+  }
+
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+  .img-size{
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .rounded{
+      border-radius: 20px!important;
+  }
+
+  .name{
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      margin-top: 1rem;
+  }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

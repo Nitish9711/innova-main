@@ -1,4 +1,4 @@
-<table class="table" multi = "true" *ngIf = "teams.length > 0 && !isLoading" >
+<!-- <table class="table" multi = "true" *ngIf = "teams.length > 0 && !isLoading" >
   <thead class=" text-primary">
     <th>
       Name
@@ -47,7 +47,7 @@
     </tr>
 
   </tbody>
-</table>
+</table> -->
 
 
 
@@ -107,6 +107,20 @@
                     <a href="{{head.linkedIn}}"><fa-icon class="icon" [icon]="linkedInIcon" size="2x"></fa-icon></a>
                 </div>
             </div>
+
+
+
+            <div *ngFor="let team of teams" class="mt-big mx-3 member-card" fxLayout="column" fxLayoutAlign="center center">
+              <img src="{{team.imagePath}}" class="member-img">
+              <div class="name"> {{ team.name }}</div>
+              <div class="designation">{{ team.designation}}</div>
+              <div class="link" fxLayout="row" fxLayoutAlign="center center">
+                  <a href="{{ team.mailId }}"><fa-icon class="icon"  [icon]="mailIcon" size="2x"></fa-icon></a>
+                  <a href="{{ team.linkedin}}"><fa-icon class="icon" [icon]="linkedInIcon" size="2x"></fa-icon></a>
+              </div>
+          </div>
+
+
         </div>
     </mat-tab>
     <!-- <mat-tab label="Co-Heads" class="sub-heading text-white">
