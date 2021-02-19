@@ -1,4 +1,4 @@
-<table class="table" multi = "true" *ngIf = "lectures.length > 0 && !isLoading" >
+<!-- <table class="table" multi = "true" *ngIf = "lectures.length > 0 && !isLoading" >
   <thead class=" text-primary">
     <th>
       Name
@@ -58,7 +58,7 @@
     </tr>
 
   </tbody>
-</table>
+</table> -->
 
 
 
@@ -70,7 +70,7 @@
 
 <div class="w-100" fxLayout="column" fxLayoutAlign="space-around end">
     <!-- <div class="sub-heading text-white mt-3">Faculty Advisor</div> -->
-    <div class="sub-heading text-white mt-big">Upcoming
+    <!-- <div class="sub-heading text-white mt-big">Upcoming
 
     <div *ngFor="let lecture of lectures">
       <div *ngIf="lecture.status ==='upcoming'" >
@@ -95,7 +95,7 @@
                 </div>
                 <img src="{{lecture.imagePath}}" class="photo position-absolute"  [routerLink]="['/lectureDetail', lecture._id]">
             </div>
-        </div>
+        </div> -->
 
         <!-- <div class="text-white mt-3 w-100" fxLayout="row wrap" fxLayoutAlign="center center">
           <mat-card class="example-card bg-darkgrey text-white m-3">
@@ -117,14 +117,39 @@
 
     </div> -->
 
-      </div>
+      <!-- </div>   [ Part of above upcoming section ]
 
     </div>
-  </div>
+  </div> -->
+
+  <div class="sub-heading text-white mt-big">Upcoming
+
+    <div *ngFor="let lecture of lectures">
+      <div *ngIf="lecture.status ==='upcoming'">
+        <div class="text-white mt-3 w-100" fxLayout="row wrap" fxLayoutAlign="center center">
+
+          <mat-card class="example-card bg-darkgrey text-white m-3">
+              <img mat-card-image src="{{lecture.imagePath}}" class="img-size" alt="{{lecture.title}}">
+              <mat-card-content>
+                  <h1> {{ lecture.lectureTitle }}</h1>
+                  <h2>By: {{ lecture.name }}</h2>
+                  <h4>{{ lecture.profession }}</h4>
+              </mat-card-content>
+              <mat-card-actions fxLayoutAlign="end">
+                  <button mat-button href="#" class="bg-black rounded"><a href="{{ lecture.regLink }}">REGISTER</a></button>
+                  <button mat-button class="bg-black rounded" [routerLink]="['/lectureDetail', lecture._id]">Read More</button>
+              </mat-card-actions>
+          </mat-card>
+
+
+    </div>
+    </div>
+    </div>
+    </div>
 
 
 
-    <div class="sub-heading text-white mt-big">Past Speakers
+    <!-- <div class="sub-heading text-white mt-big">Past Speakers
 
 
       <div *ngFor="let lecture of lectures">
@@ -150,7 +175,7 @@
                   </div>
                   <img src="{{lecture.imagePath}}" class="photo position-absolute"  [routerLink]="['/lectureDetail', lecture._id]">
               </div>
-          </div>
+          </div> -->
 
           <!-- <div class="text-white mt-3 w-100" fxLayout="row wrap" fxLayoutAlign="center center">
             <mat-card class="example-card bg-darkgrey text-white m-3">
@@ -172,11 +197,35 @@
 
       </div> -->
 
-        </div>
+        <!-- </div>
 
       </div>
-    </div>
+    </div> -->
+
+    <div class="sub-heading text-white mt-big">Past Speakers
+
+      <div *ngFor="let lecture of lectures">
+        <div *ngIf="lecture.status ==='done'">
+          <div class="text-white mt-3 w-100" fxLayout="row wrap" fxLayoutAlign="center center">
+
+            <mat-card class="example-card bg-darkgrey text-white m-3">
+                <img mat-card-image src="{{lecture.imagePath}}" class="img-size" alt="{{lecture.title}}">
+                <mat-card-content>
+                  <h1> {{ lecture.lectureTitle }}</h1>
+                  <h2>By: {{ lecture.name }}</h2>
+                  <h4>{{ lecture.profession }}</h4>
+                </mat-card-content>
+                <mat-card-actions fxLayoutAlign="end">
+                    <button mat-button href="#" class="bg-black rounded"><a href="{{ lecture.regLink }}">REGISTER</a></button>
+                    <button mat-button class="bg-black rounded" [routerLink]="['/lectureDetail', lecture._id]">Read More</button>
+                </mat-card-actions>
+            </mat-card>
+
+
+      </div>
+      </div>
+      </div>
+      </div>
 </div>
 
 </section>
-

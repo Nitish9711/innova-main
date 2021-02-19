@@ -78,10 +78,10 @@
                     <img mat-card-image src="{{competition.imagePath}}" class="img-size" alt="{{competition.title}}">
                     <mat-card-content>
                         <h1> {{ competition.title }}</h1>
-                        <p style="line-height: 16px;">{{ competition.description }}</p>   
+                        <p style="line-height: 16px;">{{ competition.description }}</p>
                     </mat-card-content>
                     <mat-card-actions fxLayoutAlign="end">
-                        <button mat-button href="#" class="bg-black rounded">REGISTER</button>
+                        <button mat-button href="#" class="bg-black rounded"><a href="{{ competition.regLink }}">REGISTER</a></button>
                         <button mat-button class="bg-black rounded" [routerLink]="['/competitionDetail', competition._id]">Read More</button>
                     </mat-card-actions>
                 </mat-card>
@@ -106,10 +106,10 @@
                     <mat-card-content>
                       <h1> {{ competition.title }}</h1>
                       <p style="line-height: 16px;">{{ competition.description }}</p>
-                     
+
                     </mat-card-content>
                     <mat-card-actions fxLayoutAlign="end">
-                      <button mat-button href="#" class="bg-black rounded">REGISTER</button>
+                      <button mat-button href="#" class="bg-black rounded"><a href="{{ competition.regLink }}">REGISTER</a></button>
                       <button mat-button class="bg-black rounded" [routerLink]="['/competitionDetail', competition._id]">Read More</button>
                     </mat-card-actions>
                 </mat-card>

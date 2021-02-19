@@ -5,21 +5,39 @@
     <div class="heading text-color">{{this.competition.title | uppercase}}</div>
     <!-- <p style= "color: white;">{{this.competition.title}}</p> -->
     <!-- <img height="100px" width="200px"  [src]="this.competition.imagePath" [alt]="this.competition.title"> -->
+
+   
+
+
+
+  <div class="text-white mt-3 w-100" fxLayout="row" fxLayoutAlign="center">
+    <div class="mt-big" fxLayout="column" fxLayoutAlign="center center">
+        <img [src]="this.competition.imagePath" class="immg">
+        
+    </div>
+
     
-    <mat-card class="nfo">
+</div>
 
-      <img mat-card-image class="img" src={{this.competition.imagePath}} alt={{this.competition.title}}>
-
-      <mat-card-content>
-
+<div>
+  <mat-card class="nfo" style="margin: 5px;">
+  
+    <!-- <img mat-card-image class="img" src={{this.lecture.imagePath}} alt={{this.lecture.name}}> -->
+  
+    <!-- <mat-card-content> -->
       <p>{{this.competition.description}}</p>
-      <!-- <p >{{this.competition.status}}</p> -->
-      <!-- <p style= "color: white;">{{this.competition.date.day}}</p> -->
-      <p><b>Competition Date:</b> {{ this.competition.date.day}}/{{this.competition.date.month}}/{{this.competition.date.year}}</p>
+
+    <!-- <p class="sub-hd">{{this.lecture.profession}}</p> -->
+    <!-- <p >{{this.competition.status}}</p> -->
+    <!-- <p style= "color: white;">{{this.competition.date.day}}</p> -->
+    <p><b style="text-align: center;">Competition Date:</b> {{ this.competition.date.day}}/{{this.competition.date.month}}/{{this.competition.date.year}}</p>
       <!-- <img height="100" width="200"  [src]="this.competition.imagePath" [alt]="this.competition.title"> -->
       <!-- <p style= "color: white;">{{this.competition.imagePath}}</p> -->
       <p><b>Competition Time:</b> {{this.competition.time}}</p>
-      <p><b>Registeration Link:</b><a href="{{this.competition.regLink}}"> {{this.competition.regLink}}</a></p>
-    </mat-card-content>
+      <p><b>Registration Link:</b><a href="{{this.competition.regLink}}"> {{this.competition.regLink}}</a></p>
+  <!-- </mat-card-content> -->
   </mat-card>
   </div>
+
+  </div>
+ 

@@ -1,4 +1,4 @@
-
+<!--
   <mat-spinner *ngIf="isLoading"></mat-spinner>
   <div *ngIf="!isLoading">
     <p style= "color: white;">{{this.lecture.name}}</p>
@@ -10,4 +10,69 @@
     <p style= "color: white;">{{this.lecture.imagePath}}</p>
     <p style= "color: white;">{{this.lecture.time}}</p>
     <p style= "color: white;">{{this.lecture.regLink}}</p>
-  </div>
+  </div> -->
+
+
+
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+
+
+
+  <div *ngIf="!isLoading">
+
+    <!-- <div class="heading text-color">{{this.lecture.name | uppercase}}</div> -->
+    <div class="heading text-color"> {{ this.lecture.lectureTitle }}</div>
+    <!-- <p style= "color: white;">{{this.competition.title}}</p> -->
+    
+    
+    
+  
+  
+
+  <div class="text-white mt-3 w-100" fxLayout="row" fxLayoutAlign="center">
+    <div class="mt-big" fxLayout="column" fxLayoutAlign="center center">
+        <img [src]="this.lecture.imagePath" class="immg">
+        <div class="name" style="font-size: x-large;
+        /* margin: auto; */
+        margin-top: 10px;">{{this.lecture.name | uppercase}}</div>
+        <div class="designation" style="font-size: large;
+        /* margin: auto; */
+        margin-top: 10px;">( {{this.lecture.profession}} )</div>
+    </div>
+
+    
+</div>
+<!-- <div class="msg-fa bg-darkgrey">
+
+    <h2 style="text-align: center;
+    font-size: xx-large;
+    margin-top: 10px;
+    margin-bottom: 15px; color: white;">Word from the Faculty Advisor</h2>
+
+ <p>Lecture Date: {{ this.lecture.date.day}}/{{this.lecture.date.month}}/{{this.lecture.date.year}}</p>
+ <p>Lecture Time: {{this.lecture.time}}</p>
+ <p>Registration Link:<a href="{{this.lecture.regLink}}"> {{this.lecture.regLink}}</a></p>
+
+ 
+</div> -->
+
+<div>
+<mat-card class="nfo">
+
+  <!-- <img mat-card-image class="img" src={{this.lecture.imagePath}} alt={{this.lecture.name}}> -->
+
+  <!-- <mat-card-content> -->
+
+  <!-- <p class="sub-hd">{{this.lecture.profession}}</p> -->
+  <!-- <p >{{this.competition.status}}</p> -->
+  <!-- <p style= "color: white;">{{this.competition.date.day}}</p> -->
+  <p>Lecture Date: {{ this.lecture.date.day}}/{{this.lecture.date.month}}/{{this.lecture.date.year}}</p>
+  <!-- <img height="100" width="200"  [src]="this.competition.imagePath" [alt]="this.competition.title"> -->
+  <!-- <p style= "color: white;">{{this.competition.imagePath}}</p> -->
+  <p>Lecture Time: {{this.lecture.time}}</p>
+  <p>Registration Link:<a href="{{this.lecture.regLink}}"> {{this.lecture.regLink}}</a></p>
+<!-- </mat-card-content> -->
+</mat-card>
+</div>
+
+</div>
