@@ -6,6 +6,9 @@ import { Router } from "@angular/router";
 
 import { Lecture } from "./lecture.model";
 
+import {environment} from "../../environments/environment.prod";
+const BACKEND_URL = environment.apiUrl + "lectures/";
+
 @Injectable({ providedIn: "root" })
 export class LecturesService {
   private lectures: Lecture[] = [];
@@ -16,7 +19,7 @@ export class LecturesService {
 
   getLectures() {
     this.http
-    .get<{ message: string; lectures: any }>("http://localhost:5000/api/lectures")
+    .get<{ message: string; lectures: any }>(BACKEND_URL)
     .pipe(
       map(lectureData => {
         return lectureData.lectures.map(lecture => {
@@ -59,7 +62,7 @@ export class LecturesService {
       lectureTitle:string;
       time: string;
     }>(
-      "http://localhost:5000/api/lectures/" + id
+      BACKEND_URL + id
     );
   }
 

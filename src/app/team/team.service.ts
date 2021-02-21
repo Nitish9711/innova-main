@@ -6,6 +6,11 @@ import { Router } from "@angular/router";
 
 import { Team } from "./team.model";
 
+
+import {environment} from "../../environments/environment";
+const BACKEND_URL = environment.apiUrl + "teams/";
+
+
 @Injectable({ providedIn: "root" })
 export class TeamsService {
   private teams: Team[] = [];
@@ -16,7 +21,7 @@ export class TeamsService {
 
   getTeams() {
     this.http
-    .get<{ message: string; teams: any }>("http://localhost:5000/api/teams")
+    .get<{ message: string; teams: any }>(BACKEND_URL)
     .pipe(
       map(teamData => {
         return teamData.teams.map(team => {
@@ -45,6 +50,6 @@ export class TeamsService {
     return this.teamUpdated.asObservable();
   }
 
-  
+
 
 }

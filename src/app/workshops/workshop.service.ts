@@ -6,6 +6,9 @@ import { Router } from "@angular/router";
 
 import { Workshop } from "./workshop.model";
 
+import {environment} from "../../environments/environment";
+const BACKEND_URL = environment.apiUrl + "workshops/";
+
 @Injectable({ providedIn: "root" })
 export class WorkshopsService {
   private workshops: Workshop[] = [];
@@ -16,7 +19,7 @@ export class WorkshopsService {
 
   getWorkshops() {
     this.http
-    .get<{ message: string; workshops: any }>("http://localhost:5000/api/workshops")
+    .get<{ message: string; workshops: any }>(BACKEND_URL)
     .pipe(
       map(workshopData => {
         return workshopData.workshops.map(workshop => {
@@ -62,7 +65,7 @@ export class WorkshopsService {
         regLink: string,
         time: string
     }>(
-      "http://localhost:5000/api/workshops/" + id
+      BACKEND_URL + id
     );
   }
 

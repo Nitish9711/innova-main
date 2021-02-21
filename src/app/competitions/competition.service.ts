@@ -6,6 +6,9 @@ import { Router } from "@angular/router";
 
 import { Competition } from "./competition.model";
 
+import {environment} from "../../environments/environment";
+const BACKEND_URL = environment.apiUrl + "competitions/";
+
 @Injectable({ providedIn: "root" })
 export class CompetitionsService {
   private competitions: Competition[] = [];
@@ -16,7 +19,7 @@ export class CompetitionsService {
 
   getCompetitions() {
     this.http
-    .get<{ message: string; competitions: any }>("http://localhost:5000/api/competitions")
+    .get<{ message: string; competitions: any }>(BACKEND_URL)
     .pipe(
       map(competitionData => {
         return competitionData.competitions.map(competition => {
@@ -61,7 +64,7 @@ export class CompetitionsService {
         time: string,
         regLink: string
     }>(
-      "http://localhost:5000/api/competitions/" + id
+      BACKEND_URL + id
     );
   }
 

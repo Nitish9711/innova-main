@@ -6,6 +6,10 @@ import { Router } from "@angular/router";
 
 import { Subscriber } from "./subscriber.model";
 
+
+import {environment} from "../../environments/environment";
+const BACKEND_URL = environment.apiUrl + "subscriber/";
+
 @Injectable({ providedIn: "root" })
 export class SubscribersService {
   private subscribers: Subscriber[] = [];
@@ -20,9 +24,9 @@ export class SubscribersService {
 
   addSubscriber(subscriber) {
     const subscriberData = new FormData();
-    subscriberData.append("title", subscriber.name);
-    subscriberData.append("description", subscriber.phone);
-    subscriberData.append("status", subscriber.email);
+    subscriberData.append("name", subscriber.name);
+    subscriberData.append("phone", subscriber.phone);
+    subscriberData.append("email", subscriber.email);
     console.log(subscriber);
     // competitionData.append("imagePath", competition.image, competition.name);
 
@@ -31,7 +35,7 @@ export class SubscribersService {
 
     this.http
       .post(
-        "http://localhost:5000/api/subscriber",
+        BACKEND_URL,
         subscriber
       )
       .subscribe(temp => {

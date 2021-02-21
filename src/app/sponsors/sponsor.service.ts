@@ -6,6 +6,10 @@ import { Router } from "@angular/router";
 
 import { Sponsor } from "./sponsor.model";
 
+
+import {environment} from "../../environments/environment";
+const BACKEND_URL = environment.apiUrl + "sponsors/";
+
 @Injectable({ providedIn: "root" })
 export class SponsorsService {
   private sponsors: Sponsor[] = [];
@@ -16,7 +20,7 @@ export class SponsorsService {
 
   getSponsors() {
     this.http
-    .get<{ message: string; sponsors: any }>("http://localhost:5000/api/sponsors")
+    .get<{ message: string; sponsors: any }>(BACKEND_URL)
     .pipe(
       map(sponsorData => {
         return sponsorData.sponsors.map(sponsor => {
