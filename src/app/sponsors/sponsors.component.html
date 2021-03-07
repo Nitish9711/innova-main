@@ -59,16 +59,16 @@
     <div class="w-100" fxLayout="row wrap" >
 
     <mat-card class="example-card bg-darkgrey text-white m-3" style="width: fit-content; height: fit-content;">
-      <img mat-card-image src="{{sponsor.imagePath}}" class="img-size" alt="{{ sponsor.sponsorTitle}}">
+      <a href="{{ sponsor.link }}">   <img mat-card-image src="{{sponsor.imagePath}}" class="img-size" alt="{{ sponsor.sponsorTitle}}"></a>
       <!-- <mat-card-content>
         <h1>{{ sponsor.sponsorTitle}}</h1>
         <h2><b>Sponsor Name:</b> {{ sponsor.sponsorName }}</h2>
         <h2><b>Sponsor Year:</b> {{ sponsor.year}}</h2>
       </mat-card-content> -->
-      <mat-card-actions fxLayoutAlign="end">
-          <button mat-button href="#" class="bg-black rounded"><a href="{{ sponsor.link }}">REGISTER</a></button>
+      <!-- <mat-card-actions fxLayoutAlign="end">
+          <button mat-button href="#" class="bg-black rounded"><a href="{{ sponsor.link }}">REGISTER</a></button> -->
           <!-- <button mat-button class="bg-black rounded" [routerLink]="['/competitionDetail', competition._id]">Read More</button> -->
-      </mat-card-actions>
+      <!-- </mat-card-actions> -->
   </mat-card>
 
 
